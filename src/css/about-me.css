@@ -84,3 +84,30 @@
     justify-content: center;
     align-items: center;
 }
+
+.third-part {
+    padding-top: 16px;
+    padding-bottom: 30px;
+}
+
+.mobile-open-ac {
+    stroke: white;
+    fill: transparent;
+}
+
+.accordion-button {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+    padding: 9px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-item-ac {
+    display: flex;
+    justify-content: space-between;
+}
