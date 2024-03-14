@@ -49,7 +49,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
-    padding-bottom: 44px;
+    margin-bottom: 12px;
 }
 
 .list-item-description {
@@ -110,4 +110,9 @@
 .list-item-ac {
     display: flex;
     justify-content: space-between;
+}
+
+.list-skills {
+    display: flex;
+    flex-wrap: wrap;
 }
