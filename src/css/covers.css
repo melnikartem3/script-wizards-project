@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.covers{
+    padding: 82px 0px;
+}
+ 
+.covers-header{
+    display: none;
+}
+
+.content {
+  position: relative;
+}
+.marquee {
+    max-height: 960px;
+    left: -500px;
+    position: absolute;
+     overflow: hidden;
+}
+
+.marquee__inner {
+   margin-bottom: 80px;
+   display: flex;
+   transform: rotate(20deg);
+   
+}
+
+.marquee__line {
+  transform: translateY(-400px);
+  margin-right: 50px; 
+  width: 544px;
+  height: auto;
+  animation-name: marqueeLine;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  0%{}
+  50%{
+    transform: translateX(100%);
+  }
+  100%{}
+}
+
+
+
