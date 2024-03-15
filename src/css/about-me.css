@@ -111,9 +111,14 @@
 .list-item-ac {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .list-skills {
     display: flex;
     flex-wrap: wrap;
+}
+.list-icon-active{
+    background-color: #ED3B44;
+    border: #ED3B44;
 }
