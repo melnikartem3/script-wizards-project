@@ -1,0 +1,135 @@
+/* ======MOBILE START====== */
+
+.benefits {
+    padding-bottom: 32px;
+    padding-top: 32px;
+
+}
+
+.benefits-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    margin-bottom: 32px;
+}
+
+.benefits-list-item {
+    border-radius: 20px;
+    padding: 24px;
+    background-color: var(--support-text);
+}
+
+.benefits-list {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.benefits-box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: var(--btn-color);
+    margin-bottom: 64px;
+}
+.benefits-list-icon{
+    stroke: var(--main-color);
+    fill: transparent;
+}
+
+
+.benefits-list-title {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+    margin-bottom: 8px;
+}
+
+.benefits-list-text {
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+
+
+
+.work-together-link {
+    
+    display: flex;
+    background-color: transparent;
+    color: var(--main-color);
+    letter-spacing: -0.02em;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 36px;
+    width: 189px;
+    height: 55px;
+
+}
+
+/* ======MOBILE END====== */
+
+/* ======TABLET START====== */
+@media screen and (min-width: 768px) {
+
+   
+    .benefits {
+        padding-bottom: 48px;
+        padding-top: 48px;
+
+    }
+
+    .benefits-list {
+        margin-bottom: 64px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+
+    .benefits-list-item {
+        width: calc((100% - 16px) / 2);
+    }
+}
+
+/* ======TABLET END====== */
+
+/* ======DESKTOP START====== */
+
+@media screen and (min-width: 1440px) {
+   
+
+    .benefits {
+        padding-bottom: 82px;
+        padding-top: 82px;
+    }
+
+    .benefits-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+
+    .benefits-empty-box {
+        flex: 1;
+    }
+
+    .benefits-content-wrapper {
+        flex: 1;
+    }
+
+    
+}
+
+/* ======DESKTOP END====== */
