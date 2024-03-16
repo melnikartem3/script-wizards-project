@@ -9,10 +9,9 @@ body {
 }
 
 .covers{
-  /* padding: 82px 0px; */
   background-color: transparent;
   height: 960px; 
-    background-image: url("../images/coversMK2/elements_vectors.png");
+    background-image: url("../images/coversMK2/elements_vectors_min.png");
    
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,17 +22,11 @@ body {
     display: none;
 }
 
-.content {
-    background-image: url("../images/coversMK2/elements_vectors.png");
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
 .marquee {
-padding-top: 82px;
+  padding-top: 82px;
   height: 960px;
    position: absolute;
     width: max-content;
