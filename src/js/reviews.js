@@ -37,8 +37,8 @@ fetch(URL)
 
         1440: {
           slidesPerView: 4,
-          spaceBetween: 18,
           slidesPerGroup: 1,
+          spaceBetween: 18,
         },
       },
 
@@ -60,8 +60,8 @@ function renderCard(card) {
             class="reviews-item-img"
             src="${avatar_url}"
             alt="${_id}"
-            width="40"
-            height="40"
+            width="48"
+            height="48"
             loading="lazy"
           />
           <h3 class="reviews-item-title">${author}</h3>
