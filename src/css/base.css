@@ -10,7 +10,7 @@ body {
   padding-right: 16px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 375px) {
   .container {
     width: 375px;
     margin-right: auto;
@@ -25,12 +25,6 @@ body {
     padding-right: 32px;
   }
 }
-
-/* @media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-} */
 
 @media screen and (min-width: 1440px) {
   .container {
