@@ -9,36 +9,46 @@ body {
 }
 
 .covers{
-    padding: 82px 0px;
-}
+  /* padding: 82px 0px; */
+  background-color: transparent;
+  height: 960px; 
+    background-image: url("../images/coversMK2/elements_vectors.png");
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
  
 .covers-header{
     display: none;
 }
 
 .content {
-  position: relative;
+    background-image: url("../images/coversMK2/elements_vectors.png");
+   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
 .marquee {
-    max-height: 960px;
+padding-top: 82px;
+  height: 960px;
+   position: absolute;
     width: max-content;
-    position: absolute;
      overflow: hidden;
-     border: 4px solid lime;
-     padding-block: 40px;
 }
+
+
 
 
 .marquee__inner {
   display: flex; 
   gap: 2rem;
    animation: marqueeLine 20s linear infinite;
+   margin-bottom: 40px;
 }
-
-img{
-  /* transform: rotate(20deg); */
-}
-
 
 @keyframes marqueeLine {
  to{
@@ -46,7 +56,5 @@ img{
  }
 }
 
-.new{
-  border: 4px solid lime;
-}
+
 
