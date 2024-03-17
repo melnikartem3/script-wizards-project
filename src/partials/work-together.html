@@ -10,8 +10,9 @@
                     ./images/together/together-tablet@3x.jpg 210w"
                     sizes="(min-width: 768px) 70px, (max-width: 767px) 44px"
                     src="./images/together/together-mobile@1x.jpg"
-                    alt="logo"/>
-        <h2 class="footer-headline-tagline">Let&#39;s <span class="footer-headline-span">work</span></h2>
+                    alt="logo"
+                    loading="lazy"/>
+        <h2 class="footer-headline-tagline">Let&#8217;s <span class="footer-headline-span">work</span></h2>
     </div>
 
         <span class="footer-headline-tagline">together</span>
@@ -20,10 +21,16 @@
 
     <form class="footer-form">
 
+      <div class="footer-input-box"> 
         <input class="footer-form-item footer-form-input" type="email" id="email" required 
-        pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+        pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com|hey\.com|fastmail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         placeholder="clients@gmail.com" autocomplete="off">
+                <p class="footer-input-error-message">Invalid email, try again</p>
+                <p class="footer-input-success-message">Succes!</p>
 
+        </div>
+
+        
         <textarea class="footer-form-item footer-form-textarea"  id="comment" 
         required placeholder="comments" ></textarea>
 
@@ -37,3 +44,18 @@
     </address>
 
 </section>
+<div class="footer-modal-background">
+    <div class="footer-modal">
+        <button class="footer-modal-btn" type="button">
+            <svg class="footer-modal-btn-icon" width="22" height="22">
+                <use href="./images/favicon/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="footer-modal-container">
+                <h2 class="modal-tagline">Thank you for your interest in cooperation!</h2>
+                <p class="modal-text">The manager will contact you shortly to discuss further details and opportunities
+                    for cooperation. Please stay in
+                    touch.</p>
+        </div>
+    </div>
+</div>
