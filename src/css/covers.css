@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.covers{
+  background-color: transparent;
+  height: 960px; 
+    background-image: url("../images/coversMK2/elements_vectors_min.png");
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+ 
+.covers-header{
+    display: none;
+}
+
+
+
+
+.marquee {
+  padding-top: 82px;
+  height: 960px;
+   position: absolute;
+    width: max-content;
+     overflow: hidden;
+}
+
+
+
+
+.marquee__inner {
+  display: flex; 
+  gap: 2rem;
+   animation: marqueeLine 20s linear infinite;
+   margin-bottom: 40px;
+}
+
+@keyframes marqueeLine {
+ to{
+  transform: translate(calc(-50% - 1rem));
+ }
+}
+
+
+

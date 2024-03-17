@@ -1,21 +1,22 @@
 .reviews-page {
-  padding: 32px 0;
+  padding: 2rem 0;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-page {
-    padding: 48px 0;
+    padding: 3rem 0;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .reviews-page {
-    padding: 82px 0;
+    padding: 5.125rem 0;
   }
 }
 
 .reviews-title {
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -28,28 +29,21 @@
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-  .reviews-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .reviews-list {
-    gap: 16px;
-  }
-}
-
 .reviews-list-item {
   width: 343px;
   height: 302px;
+  max-height: 302px;
+  min-height: 302px;
   padding: 2rem 1.5rem;
 
   border: 1px solid #fafafa33;
   border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-list-item {
+    max-width: 344px;
+  }
 }
 
 .reviews-item-img {
@@ -71,6 +65,13 @@
   letter-spacing: -0.02em;
 
   color: #fafafa99;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
 }
 
 .reviews-btn-wrapper {
@@ -87,16 +88,37 @@
 
   border: 1px solid #fafafa80;
   border-radius: 50%;
-  width: 68px;
-  height: 68px;
+  width: 52px;
+  height: 52px;
   background-color: var(--bg-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-btn {
+    width: 66px;
+    height: 66px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews-btn {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .btn-icon {
   fill: transparent;
   stroke: var(--main-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .btn-icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .reviews-btn:disabled {
