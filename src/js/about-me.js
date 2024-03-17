@@ -24,3 +24,38 @@ accordionHeaders.forEach(header => {
     }
   });
 });
+
+//////////////////////////////Swiper///////////////////////////////////////
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+
+
+ const swiperAboutMe = new Swiper('.swiper-cont', {
+   direction: 'horizontal',
+   updateOnWindowResize: true,
+   enabled: true,
+   swipeHandler: '.list-icon',
+   speed: 300,
+
+   breakpoints: {
+     375: {
+       slidesPerView: 2,
+       slidesPerGroup: 1,
+     },
+     768: {
+       slidesPerView: 3,
+       slidesPerGroup: 1,
+     },
+
+     1440: {
+       slidesPerView: 5,
+       slidesPerGroup: 1,
+     },
+   },
+
+   navigation: {
+     nextEl: '.swiper-button',
+     preventClicks: false,
+   },
+ });
