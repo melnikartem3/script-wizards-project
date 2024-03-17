@@ -1,0 +1,63 @@
+<section class="header-section">
+  <div class="container header-wrapper">
+    <div class="logo-wrapper">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ../images/header/header-desktop@1x.jpg  1x,
+            ../images/header/header-desktop@2x.jpg  2x,
+            ../images/header/header-desktop@3x.jpg  3x,
+            ../images/header/header-desktop@1x.webp 1x,
+            ../images/header/header-desktop@2x.webp 2x,
+            ../images/header/header-desktop@3x.webp 3x
+          "
+          type="image/jpg"
+        />
+
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ../images/header/header-tablet@1x.jpg  1x,
+            ../images/header/header-tablet@2x.jpg  2x,
+            ../images/header/header-tablet@3x.jpg  3x,
+            ../images/header/header-tablet@1x.webp 1x,
+            ../images/header/header-tablet@2x.webp 2x,
+            ../images/header/header-tablet@3x.webp 3x
+          "
+          type="image/jpg"
+        />
+
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            ../images/header/header-mobile@1x.jpg  1x,
+            ../images/header/header-mobile@2x.jpg  2x,
+            ../images/header/header-mobile@3x.jpg  3x,
+            ../images/header/header-mobile@1x.webp 1x,
+            ../images/header/header-mobile@2x.webp 2x,
+            ../images/header/header-mobile@3x.webp 3x
+          "
+        />
+
+        <img
+          class="logo-img"
+          src="../images/header/header-mobile@1x.jpg"
+          alt="icon-resume"
+          width="80"
+          height="80"
+        />
+      </picture>
+      <svg class="icon-logo" width="80" height="19">
+        <use href="../images/favicon/icons.svg#icon-jefferson"></use>
+      </svg>
+    </div>
+    <nav class="navigation">
+      <a class="nav-general-link" href="">Menu</a>
+    </nav>
+    <a class="header-order-link" href="#footer">Order the project</a>
+    <svg class="burger-icon" width="28" height="28">
+      <use href="../images/favicon/icons.svg#icon-burger"></use>
+    </svg>
+  </div>
+</section>
