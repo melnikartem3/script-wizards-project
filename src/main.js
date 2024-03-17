@@ -10,3 +10,6 @@ import './js/projects';
 import './js/reviews';
 import './js/about-me';
 import './js/mobile-menu';
+import './js/work-together';
+import './js/about-me';
+
