@@ -8,46 +8,44 @@ body {
   box-sizing: border-box;
 }
 
-.covers{
+.covers {
   background-color: transparent;
-  height: 960px; 
-    background-image: url("../images/coversMK2/elements_vectors_min.png");
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-} 
-
- 
-.covers-header{
-    display: none;
-}
-
-
-
-
-.marquee {
-  padding-top: 82px;
   height: 960px;
-   position: absolute;
-    width: max-content;
-     overflow: hidden;
+  margin-bottom: 164px;
+  padding-top: 82px;
 }
 
+.covers-scroller {
+  max-width: 1440px;
 
+  height: 960px;
+  position: absolute;
+  overflow: hidden;
 
+  background-image: url('../images/coversMK2/elements_vectors_min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.marquee__inner {
-  display: flex; 
+.covers-scroller-inner-container {
+  width: fit-content;
+  transform: rotate(17deg);
+}
+
+.covers-scroller-inner {
+  position: relative;
+  left: -100px;
+  bottom: -200px;
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
   gap: 2rem;
-   animation: marqueeLine 20s linear infinite;
-   margin-bottom: 40px;
+  animation: flow 10s linear infinite;
+  margin-bottom: 40px;
 }
 
-@keyframes marqueeLine {
- to{
-  transform: translate(calc(-50% - 1rem));
- }
+@keyframes flow {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
 }
-
-
-
