@@ -28,6 +28,15 @@ fetch(URL)
       swipeHandler: '.reviews-list-item',
       speed: 300,
 
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+
+      mousewheel: {
+        invert: true,
+      },
+
       breakpoints: {
         768: {
           slidesPerView: 2,
