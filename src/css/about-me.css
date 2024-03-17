@@ -50,6 +50,11 @@
     padding-bottom: 16px;
 }
 
+.list-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
 .list-item-title {
 
     font-weight: 600;
@@ -59,6 +64,7 @@
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     margin-bottom: 12px;
+
 }
 
 .list-item-description {
@@ -88,9 +94,9 @@
 .list-icon {
     border-radius: 100%;
     border: 1px solid white;
-    width: 130px;
-    height: 130px;
-    display: flex;
+    width: 130px !important;
+    height: 130px !important;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     font-size: 16px;
@@ -101,13 +107,44 @@
 .third-part {
     padding-top: 16px;
     padding-bottom: 30px;
-    /* display: flex;
-    gap: 55px; */
 }
 
 .mobile-open-ac {
     stroke: white;
     fill: transparent;
+}
+
+
+.swiper-button {
+    border: none;
+    background: none;
+}
+
+.mobile-next-slider {
+    stroke: #3B3B3B;
+    fill: transparent;
+}
+
+.list-skills {
+    display: flex;
+}
+
+.list-icon-active {
+    background-color: #ED3B44;
+    border: #ED3B44;
+}
+
+
+
+/* /////////////////Accordion style////////////////////// */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.accordion-header.active {
+    background-color: #ddd;
 }
 
 .accordion-button {
@@ -120,36 +157,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.slider-button {
-    border: none;
-    background: none;
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-in;
 }
 
-.mobile-next-slider {
-    stroke: #3B3B3B;
-    fill: transparent;
+.accordion-panel.active {
+    max-height: 100%;
 }
 
-.list-item-ac {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
+/* /////////////////////Accordion style//////////////////////// */
 
-.list-skills {
-    display: flex;
-}
+/* /////////////////////Swiper style//////////////////////// */
 
-.list-icon-active {
-    background-color: #ED3B44;
-    border: #ED3B44;
-}
+
+
+
+
+
+
+/* /////////////////////Swiper style//////////////////////// */
 
 /* ////////////////////////////////////////////////// */
 
 @media screen and (min-width: 768px) {
+
+    .list-item {
+        padding-bottom: 32px;
+    }
 
     .first-part-text {
         font-size: 38px;
@@ -175,14 +214,12 @@
     }
 
     .list-icon {
-        width: 200px;
-        height: 200px;
+        height: 200px !important;
+        width: 200px !important;
     }
+
 }
 
-/* @media screen and (min-width: 1280px) {
-    
-} */
 
 @media screen and (min-width: 1440px) {
     .first-part {
@@ -199,16 +236,17 @@
         height: 700px;
     }
 
-   .list-item-description{
-    width: 612px;
-   }
+    .list-item-description {
+        width: 612px;
+    }
+
     .right-text {
         display: flex;
         flex-direction: column;
         align-items: end;
         padding-right: 68px;
     }
-    
+
     .third-part {
         gap: 72px;
     }
