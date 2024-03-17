@@ -8,4 +8,5 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import './js/projects';
 import './js/reviews';
+import './js/work-together';
 import './js/about-me';
