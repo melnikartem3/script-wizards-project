@@ -55,8 +55,7 @@ new Swiper('.about-swiper-container', {
   slideActiveClass: 'about-slide-active',
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.about-swiper-button',
   },
   mousewheel: {
     invert: true,

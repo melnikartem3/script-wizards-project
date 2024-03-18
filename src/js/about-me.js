@@ -1,6 +1,6 @@
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 const accordionPanels = document.querySelector('.accordion-panel');
-const firstContainer = document.querySelector('.ac');
+const firstContainer = document.querySelector('.about-ac');
 const firstIcon = document.querySelector('.mobile-open-ac');
 
       accordionPanels.style.maxHeight =  '100%';
@@ -9,7 +9,7 @@ const firstIcon = document.querySelector('.mobile-open-ac');
 
 accordionHeaders.forEach(header => {
   header.addEventListener('click', function () {
-    const accordionItem = this.closest('.ac');
+    const accordionItem = this.closest('.about-ac');
     const panel = accordionItem.querySelector('.accordion-panel');
     const icon = this.querySelector('.mobile-open-ac');
 
@@ -26,50 +26,8 @@ accordionHeaders.forEach(header => {
 });
 
 //////////////////////////////Swiper///////////////////////////////////////
-import Swiper from 'swiper';
-import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-const swiperCont = document.querySelector('.swiper');
-const nextBtn = document.querySelector('.swiper-button');
-
-const swiperAboutMe = new Swiper(swiperCont, {
-  modules: [Navigation, Mousewheel, Keyboard],
-  slidesPerView: 2,
-  watchOverflow: true,
-  speed: 300,
-  breakpoints: {
-    375: {
-      slidesPerView: 2,
-      slidesPerGroup: 1,
-    },
-    768: {
-      slidesPerView: 3,
-      slidesPerGroup: 1,
-    },
-
-    1440: {
-      slidesPerView: 6,
-      slidesPerGroup: 1,
-    },
-  },
-
-  navigation: {
-    nextEl: nextBtn,
-  },
-  // mousewheel: {
-  //   invert: true,
-  // },
-  // keyboard: {
-  //   enabled: true,
-  //   onlyInViewport: false,
-  // },
-});
-
 // Обробник кліку на кнопку "Наступний"
-document.querySelector('.swiper-button').addEventListener('click', () => {
+document.querySelector('.about-swiper-button').addEventListener('click', () => {
   const activeSlide = document.querySelector('.swiper-slide.active');
   const nextSlide = activeSlide.nextElementSibling;
 
