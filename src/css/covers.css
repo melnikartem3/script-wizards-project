@@ -1,15 +1,8 @@
-body {
-  margin: 0;
+.covers > .container {
+  padding: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  width: 282px;
+.covers-img {
   height: 162px;
 }
 
@@ -21,13 +14,13 @@ img {
 }
 
 .covers-scroller {
-  max-width: 320px;
+  max-width: 375px;
 
   height: 508px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 
-  background-image: url('../images/coversMK2/elements_vectors_min.png');
+  background-image: url('/images/covers/elements_vectors_min.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -36,6 +29,8 @@ img {
 .covers-scroller-inner-container {
   width: fit-content;
   transform: rotate(17deg);
+  position: absolute;
+  top: -10px;
 }
 
 .covers-scroller-inner {
@@ -46,7 +41,7 @@ img {
   width: max-content;
   flex-wrap: nowrap;
   gap: 2rem;
-  animation: flow 10s linear infinite;
+  animation: flow 20s linear infinite;
   margin-bottom: 30px;
 }
 
@@ -66,17 +61,25 @@ img {
     max-width: 768px;
   }
 
-  img {
+  .covers-img {
     width: 544px;
     height: 314px;
   }
   .covers-scroller-inner {
     margin-bottom: 40px;
   }
+
+  .covers-scroller-inner-container {
+    top: 150px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .covers-scroller {
     max-width: 1440px;
+  }
+
+  .covers-scroller-inner-container {
+    top: 0;
   }
 }

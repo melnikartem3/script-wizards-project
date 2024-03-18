@@ -5,6 +5,14 @@
   width: 100%;
 }
 
+.header-btn-burger {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  background-color: transparent;
+  border: transparent;
+}
+
 .logo-wrapper {
   display: flex;
 }
@@ -27,7 +35,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .burger-icon {
+  .header-btn-burger {
     display: none;
   }
 
@@ -55,4 +63,9 @@
     letter-spacing: -0.02em;
     background-color: var(--btn-color);
   }
+}
+
+.logo-img {
+  margin-right: 8px;
+  border-radius: 18px;
 }
