@@ -14,5 +14,4 @@ import './js/faq'
 import './js/about-me';
 import './js/mobile-menu';
 import './js/work-together';
-import './js/about-me';
-
+import './js/covers.js';
