@@ -21,8 +21,8 @@ function addDoubleHtml() {
 addDoubleHtml();
 
 const options = {
-    threshold: 0.25,
-    rootMargin: "0px",
+    threshold: 0.5,
+    rootMargin: "-40px",
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
