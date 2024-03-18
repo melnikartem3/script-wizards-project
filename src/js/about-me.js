@@ -27,35 +27,60 @@ accordionHeaders.forEach(header => {
 
 //////////////////////////////Swiper///////////////////////////////////////
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
+
 import 'swiper/css';
+import 'swiper/css/navigation';
 
+const swiperCont = document.querySelector('.swiper');
+const nextBtn = document.querySelector('.swiper-button');
 
- const swiperAboutMe = new Swiper('.swiper-cont', {
-   direction: 'horizontal',
-   updateOnWindowResize: true,
-   enabled: true,
-   swipeHandler: '.list-icon',
-   speed: 300,
+const swiperAboutMe = new Swiper(swiperCont, {
+  modules: [Navigation, Mousewheel, Keyboard],
+  slidesPerView: 2,
+  watchOverflow: true,
+  speed: 300,
+  breakpoints: {
+    375: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+    },
 
-   breakpoints: {
-     375: {
-       slidesPerView: 2,
-       slidesPerGroup: 1,
-     },
-     768: {
-       slidesPerView: 3,
-       slidesPerGroup: 1,
-     },
+    1440: {
+      slidesPerView: 6,
+      slidesPerGroup: 1,
+    },
+  },
 
-     1440: {
-       slidesPerView: 5,
-       slidesPerGroup: 1,
-     },
-   },
+  navigation: {
+    nextEl: nextBtn,
+  },
+  // mousewheel: {
+  //   invert: true,
+  // },
+  // keyboard: {
+  //   enabled: true,
+  //   onlyInViewport: false,
+  // },
+});
 
-   navigation: {
-     nextEl: '.swiper-button',
-     preventClicks: false,
-   },
- });
+// Обробник кліку на кнопку "Наступний"
+document.querySelector('.swiper-button').addEventListener('click', () => {
+  const activeSlide = document.querySelector('.swiper-slide.active');
+  const nextSlide = activeSlide.nextElementSibling;
+
+  // Перевіряємо, чи існує наступний слайд
+  if (nextSlide) {
+    activeSlide.classList.remove('active');
+    nextSlide.classList.add('active');
+  } else {
+    // Якщо наступного слайду немає, перехід на перший
+    const firstSlide = document.querySelector('.swiper-slide');
+    activeSlide.classList.remove('active');
+    firstSlide.classList.add('active');
+  }
+});
