@@ -5,12 +5,13 @@
   width: 100%;
 }
 
-.logo-wrapper {
-  display: flex;
+.logo-img {
+  border-radius: 18px;
+  margin-right: 8px;
 }
 
-.logo-paragraph {
-  margin-left: 8px;
+.logo-wrapper {
+  display: flex;
 }
 
 .header-wrapper {
@@ -22,17 +23,55 @@
   display: none;
 }
 
+.burger-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
 .header-order-link {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .burger-icon {
+  .burger-btn {
     display: none;
   }
 
-  .navigation {
+  .nav-links {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInOut 0.5s ease;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
   }
 
   .nav-general-link {
@@ -41,6 +80,34 @@
     letter-spacing: -0.02em;
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    transition: var(--cubic);
+  }
+
+  .nav-general-link:hover,
+  .nav-general-link:focus {
+    color: var(--btn-color);
+    text-decoration: overline;
+  }
+
+  .nav-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-links {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    transition: var(--cubic);
+  }
+
+  .nav-links:hover,
+  .nav-links:focus {
+    color: var(--btn-hover-color);
+    text-decoration: underline;
   }
 
   .header-order-link {
@@ -54,5 +121,12 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     background-color: var(--btn-color);
+    transition: var(--cubic);
+  }
+
+  .header-order-link:hover,
+  .header-order-link:focus {
+    background-color: var(--btn-hover-color);
+    color: var(--gray-color);
   }
 }
