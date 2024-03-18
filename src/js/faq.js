@@ -8,6 +8,7 @@ const faqList = document.querySelector('.faq-list')
 
 const faqBtns = document.querySelectorAll('.faq-list-item-btn');
 
+
 faqBtns.forEach(function(faqBtn) {
     faqBtn.addEventListener('click', function () {
         
@@ -17,10 +18,12 @@ faqBtns.forEach(function(faqBtn) {
  
         if (faqText.style.display === 'none' || !faqText.style.display) {
             faqText.style.display = 'block';
+            faqBtn.parentElement.classList.remove('close-fqa-list-item-laptop')
             faqSvg.classList.add('close-svg')
         } else {
             faqText.style.display = 'none';
             faqSvg.classList.remove('close-svg')
+            faqBtn.parentElement.classList.add('close-fqa-list-item-laptop')
         }
     });
 });

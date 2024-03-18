@@ -132,11 +132,14 @@
     column-gap: 64px;
     row-gap: 0;
     position: relative;
+    flex-shrink: 0;
+    
     }
 
    .faq-list-item {
     height: 186px;
     margin-top: 32px;
+    max-width: 100%
    }
 
 /* ДЛЯ JS */
