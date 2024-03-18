@@ -5,6 +5,21 @@
   width: 100%;
 }
 
+.header-btn-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.logo-wrapper {
+  display: flex;
+  
 .logo-img {
   border-radius: 18px;
   margin-right: 8px;
@@ -23,22 +38,13 @@
   display: none;
 }
 
-.burger-btn {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-}
-
 .header-order-link {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .burger-btn {
+  
+  .header-btn-burger {
     display: none;
   }
 
@@ -128,4 +134,9 @@
   .header-order-link:focus {
     background-color: var(--btn-hover-color);
   }
+}
+
+.logo-img {
+  margin-right: 8px;
+  border-radius: 18px;
 }

@@ -1,11 +1,11 @@
 'use strict';
 
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 // import 'swiper/css/navigation';
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Keyboard, Mousewheel]);
 
 const URL = 'https://portfolio-js.b.goit.study/api/reviews';
 const list = document.querySelector('.reviews-list');
