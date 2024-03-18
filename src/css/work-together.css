@@ -4,11 +4,23 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 342px;
+  background-image: url(/images/together/footer-mobile.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top 0 right -30px;
+}
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (-webkit-min-device-pixel-ratio: 2) {
+  .footer {
+    background-image: url(/images/together/footer-mobile@2x.png);
+  }
+}
+.footer-container {
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 .footer-headline {
-  margin-top: 32px;
-  margin-bottom: 63px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -32,15 +44,19 @@
 .footer-headline-span {
   color: var(--btn-color);
 }
-
 .footer-form {
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
 }
+textarea::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
 
 .footer-form-item {
   width: 100%;
+  padding-bottom: 20px;
   height: 44px;
   color: var(--main-color);
   font-weight: 500;
@@ -54,22 +70,18 @@
   background-color: inherit;
   outline: none;
   resize: none;
-  transition: border-bottom-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-bottom-color var(--cubic);
 }
-
 .footer-form-input {
   margin-bottom: 16px;
 }
-
 .footer-form-textarea {
   margin-bottom: 32px;
 }
-
 .footer-form-item:focus,
 .footer-form-item:hover {
   border-bottom-color: var(--main-color);
 }
-
 .footer-input-success-message,
 .footer-input-error-message {
   display: none;
@@ -108,7 +120,7 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--cubic);
 }
 .footer-form-button:hover,
 .footer-form-button:focus {
@@ -132,7 +144,7 @@
   letter-spacing: -0.02em;
   text-align: center;
   font-style: normal;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--cubic);
 }
 
 /* від 320 до 333 без цього телефон вилізає за рамку  */
@@ -153,7 +165,20 @@
 
 @media screen and (min-width: 768px) {
   .footer {
+    padding-top: 48px;
     max-width: 768px;
+    background-image: url(/images/together/footer-tablet.png);
+    background-position: top 0 right -30px;
+  }
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (-webkit-min-device-pixel-ratio: 2) {
+    .footer {
+      background-image: url(/images/together/footer-tablet@2x.png);
+    }
+  }
+  .footer-container {
+    padding-top: 80px;
     padding-bottom: 169px;
   }
   .footer-headline-tagline {
@@ -203,9 +228,23 @@
 
 @media screen and (min-width: 1440px) {
   .footer {
-    max-width: 1048px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 82px;
+    max-width: 1440px;
+    background-image: url(/images/together/footer-desktop.png);
+    background-position: top 0 right -90px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (-webkit-min-device-pixel-ratio: 2) {
+    .footer {
+      background-image: url(/images/together/footer-desktop@2x.png);
+    }
+  }
+  .footer-container {
+    max-width: 1050px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .footer-form-item {
     width: 390px;
@@ -230,8 +269,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--cubic), visibility var(--cubic);
 }
 
 .footer-modal-is-open {
