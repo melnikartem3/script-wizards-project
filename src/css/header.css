@@ -127,6 +127,5 @@
   .header-order-link:hover,
   .header-order-link:focus {
     background-color: var(--btn-hover-color);
-    color: var(--gray-color);
   }
 }
