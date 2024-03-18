@@ -1,7 +1,7 @@
 `use strict`
 
 const scroller = document.querySelectorAll(".covers-scroller-inner");
-
+const coversSection = document.querySelector(".covers");
 
 const arrayFromScroller = Array.from(scroller)
 
@@ -19,4 +19,18 @@ function addDoubleHtml() {
     }
     
 addDoubleHtml()
+
+// const options = {
+//     threshold: 0.25,
+//     rootMargin: "",
+// };
+
+// const observer = new IntersectionObserver(function  (entries, observer) {
+//     entries.forEach(entry => {
     
+//     })
+    
+// }, options);
+
+
+// observer.observe(coversSection)
