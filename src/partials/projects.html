@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="projects-title">projects</h2>
 
-    <div class="swiper swiper-container">
+    <div class="swiper-projects">
       <ul class="swiper-wrapper">
         <li class="swiper-slide">
           <div class="projects-square-wrapper">
@@ -26,6 +26,7 @@
             <div class="square-second">
               <img
                 class="img-projects"
+                loading="lazy"
                 srcset="
                   ./images/projects/projects-mobile1@1x.jpg  311w,
                   ./images/projects/projects-tablet1@1x.jpg  614w,
@@ -63,6 +64,7 @@
             <div class="square-second">
               <img
                 class="img-projects"
+                loading="lazy"
                 srcset="
                   ./images/projects/projects-mobile2@1x.jpg  311w,
                   ./images/projects/projects-tablet2@1x.jpg  614w,
@@ -100,6 +102,7 @@
             <div class="square-second">
               <img
                 class="img-projects"
+                loading="lazy"
                 srcset="
                   ./images/projects/projects-mobile3@1x.jpg  311w,
                   ./images/projects/projects-tablet3@1x.jpg  614w,
@@ -117,13 +120,13 @@
         </li>
       </ul>
       <div class="arrow-button-wraper">
-        <button class="arrow-btn-left" type="button">
-          <svg class="arrow-btn-left-icon" width="24" height="24">
+        <button class="arrow-btn-left projects-btn" type="button">
+          <svg class="arrow-btn-left-icon" width="24" height="24" aria-label="left arrow">
             <use href="./images/favicon/icons.svg#icon-arrow-left"></use>
           </svg>
         </button>
-        <button class="arrow-btn-right" type="button">
-          <svg class="arrow-btn-left-icon" width="24" height="24">
+        <button class="arrow-btn-right projects-btn" type="button">
+          <svg class="arrow-btn-left-icon" width="24" height="24" aria-label="right arrow">
             <use href="./images/favicon/icons.svg#icon-arrow-right"></use>
           </svg>
         </button>

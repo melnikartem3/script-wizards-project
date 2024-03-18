@@ -7,10 +7,12 @@
 }
 
 .covers {
+  display: flex;
+  justify-content: center;
   background-color: transparent;
   height: 508px;
-  margin-bottom: 164px;
-  padding-top: 82px;
+  margin-bottom: 64px;
+  padding-top: 32px;
 }
 
 .covers-scroller {
@@ -35,10 +37,12 @@
 
 .covers-scroller-inner {
   position: relative;
+  display: flex;
+  gap: 2rem;
+  width: max-content;
   left: -100px;
   bottom: -200px;
-  display: flex;
-  width: max-content;
+  margin-bottom: 30px;
   flex-wrap: nowrap;
   gap: 2rem;
   animation: flow 20s linear infinite;
@@ -54,6 +58,8 @@
 @media screen and (min-width: 768px) {
   .covers {
     height: 960px;
+    margin-bottom: 96px;
+    padding-top: 48px;
   }
 
   .covers-scroller {
@@ -75,11 +81,23 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .covers {
+    padding-top: 82px;
+    margin-bottom: 164px;
+  }
   .covers-scroller {
     max-width: 1440px;
   }
 
   .covers-scroller-inner-container {
     top: 0;
+  }
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .covers-scroller {
+    background-image: url(/images/covers/elements_vectors@2x-min.png);
   }
 }

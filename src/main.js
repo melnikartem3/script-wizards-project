@@ -1,13 +1,16 @@
-// import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import './js/header'
+import './js/hero'
 import './js/projects';
 import './js/reviews';
+import './js/faq'
 import './js/about-me';
 import './js/mobile-menu';
 import './js/work-together';

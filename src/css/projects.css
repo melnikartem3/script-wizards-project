@@ -3,6 +3,7 @@
 .projects {
     padding-bottom: 32px;
     padding-top: 32px;
+   
 }
 
 .projects-title {
@@ -111,13 +112,17 @@ color: var(--cards-color);
     
 }
 
-.disabled {
-    opacity: 0.5;
- cursor: not-allowed;
-   
-    pointer-events: none;
+
+
+         .projects-btn:disabled {
+             border: 1px solid #fafafa33;
+             cursor: no-drop;
+         }
     
-}
+         .projects-btn:disabled .arrow-btn-left-icon {
+             stroke: #fafafa33;
+         }
+
 
 
 /* ======MOBILE END====== */
@@ -134,6 +139,9 @@ color: var(--cards-color);
         max-width: 704px;
         margin-bottom: 64px;
     }
+
+        
+
 
     .square-first {
         padding: 64px;
@@ -179,6 +187,7 @@ color: var(--cards-color);
             width: 32px;
             height: 32px;
         }
+        
 }
 
 /* ======TABLET END====== */

@@ -40,6 +40,30 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   max-width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #1c1d20,
+    #ed3b44,
+    #e0373f,
+    #fafafa,
+    #242527
+  );
+  background-size: 60%;
+  background-clip: text;
+  color: var(--main-color);
+  transition: color var(--cubic);
+}
+
+.hero-title:hover,
+.hero-title:focus {
+  color: transparent;
+  animation: animated-gradient 1.5s infinite alternate-reverse; /* Збільшено час анімації */
+}
+
+@keyframes animated-gradient {
+  to {
+    color: #fafafa;
+  }
 }
 
 .hero-general-container {
@@ -159,6 +183,10 @@
     }
   }
 
+  .hero-general-container {
+    height: 1024px;
+  }
+
   .hero-title {
     font-size: 90px;
   }
@@ -189,6 +217,10 @@
 
     background-image: -webkit-image-set('/images/hero/bg-desktop.webp');
     background-image: image-set('/images/hero/bg-desktop.webp');
+  }
+
+  .hero-general-container {
+    height: 900px;
   }
 
   @media screen and (min-resolution: 192dpi),
