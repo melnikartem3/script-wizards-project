@@ -29,7 +29,7 @@ image {
   position: absolute;
   overflow: hidden;
 
-  background-image: url('./images/coversMK2/elements_vectors_min.png');
+  background-image: url('../images/covers/elements_vectors_min.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -93,6 +93,6 @@ image {
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
   .covers-scroller {
-    background-image: url(./images/coversMK2/elements_vectors@2x-min.png);
+    background-image: url(../images/covers/elements_vectors@2x-min.png);
   }
 }
