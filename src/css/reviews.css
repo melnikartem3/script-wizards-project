@@ -127,3 +127,8 @@
 .reviews-btn:disabled .btn-icon {
   stroke: #fafafa33;
 }
+
+.reviews-plug {
+  margin: 0 auto;
+  font-size: 30px;
+}
