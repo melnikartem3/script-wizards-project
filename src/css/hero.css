@@ -4,7 +4,7 @@
   margin-bottom: 32px;
 }
 
-.hero-section {
+.hero-section > .hero-general-container {
   background-image: url(/images/hero/glass-effect-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx),
   screen and (-webkit-min-device-pixel-ratio: 2) {
-  .hero-section {
+  .hero-section > .hero-general-container {
     background-image: url(/images/hero/glass-effect-mobile@2x.png);
   }
 }
@@ -126,6 +126,19 @@
 @media screen and (max-width: 320px) {
   .hero-list {
     max-width: 320px;
+    padding-bottom: 24px;
+  }
+
+  .hero-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email-wrapper {
+    margin: 0;
+    padding-bottom: 24px;
   }
 }
 
@@ -135,14 +148,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .hero-section {
+  .hero-section > .hero-general-container {
     background-image: url(/images/hero/glass-effect-tablet.png);
   }
 
   @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx),
     screen and (-webkit-min-device-pixel-ratio: 2) {
-    .hero-section {
+    .hero-section > .hero-general-container {
       background-image: url(/images/hero/glass-effect-tablet@2x.png);
     }
   }
@@ -180,7 +193,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .hero-section {
+  .hero-section > .hero-general-container {
     background-image: url(/images/hero/bg-desktop.png);
   }
 
@@ -191,7 +204,7 @@
   @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx),
     screen and (-webkit-min-device-pixel-ratio: 2) {
-    .hero-section {
+    .hero-section > .hero-general-container {
       background-image: url(/images/hero/bg-desktop@2x.png);
     }
   }

@@ -94,7 +94,7 @@
     text-decoration: none;
   }
 
-  .nav-links-wrapper {
+  .nav-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +102,7 @@
     gap: 8px;
   }
 
-  .nav-links {
+  .nav-list-item {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -110,8 +110,8 @@
     transition: var(--cubic);
   }
 
-  .nav-links:hover,
-  .nav-links:focus {
+  .nav-list-item:hover,
+  .nav-list-item:focus {
     color: var(--btn-hover-color);
     text-decoration: underline;
   }
