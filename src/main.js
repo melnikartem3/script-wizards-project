@@ -15,3 +15,4 @@ import './js/mobile-menu';
 import './js/work-together';
 import './js/swiper';
 import './js/covers.js';
+import './js/scroll-btn';
