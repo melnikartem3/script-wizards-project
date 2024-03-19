@@ -31,19 +31,25 @@ export const swiper = new Swiper('.swiper-container', {
   },
 });
 
-new Swiper('.projectsSwiper', {
-  modules: [Navigation, Keyboard],
-  slidesPerView: 'auto',
+export const swiperProjects = new Swiper('.swiper-projects', {
+  modules: [Navigation, Keyboard, Mousewheel],
+  navigation: {
+    prevEl: '.arrow-btn-left',
+    nextEl: '.arrow-btn-right',
+  },
+  watchOverflow: true,
+  slidesPerGroup: 1, 
+  slidesPerView: 1,
+  speed: 300,
+  mousewheel: {
+    invert: true,
+  },
   keyboard: {
     enabled: true,
   },
-  spaceBetween: 3200,
-  grabCursor: true,
-  navigation: {
-    nextEl: '.swiper-button-next1',
-    prevEl: '.swiper-button-prev1',
-  },
+  
 });
+
 
 new Swiper('.about-swiper-container', {
   loop: true,
