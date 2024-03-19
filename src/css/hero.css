@@ -115,12 +115,13 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  transition: color var(--cubic);
+  transition: background-color var(--cubic), border-color var(--cubic);
 }
 
 .hero-link-email:hover,
 .hero-link-email:focus {
-  color: var(--btn-hover-color);
+  background-color: var(--btn-hover-color);
+  border-color: var(--main-color);
 }
 
 @media screen and (max-width: 320px) {

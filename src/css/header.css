@@ -17,16 +17,13 @@
   border: transparent;
 }
 
-.logo-wrapper {
+.logo-link {
   display: flex;
 }
+
 .logo-img {
   border-radius: 18px;
   margin-right: 8px;
-}
-
-.logo-wrapper {
-  display: flex;
 }
 
 .header-wrapper {
