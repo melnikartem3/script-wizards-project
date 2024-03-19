@@ -204,6 +204,12 @@
         padding-bottom: 32px;
     }
 
+  .first-part-cont {
+        width: 100%;
+        height: 700px;
+        padding: 64px;
+    }
+
     .first-part-text {
         font-size: 38px;
     }
