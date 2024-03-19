@@ -1,6 +1,6 @@
 <section class="about-me" id="about-me">
+  <div class="container">
     <h2 class="title-section visually-hidden">About me</h2>
-    <div class="container">
         <div class="first-part">
             <div class="first-part-cont">
                 <p class="first-part-text">I work with people all over the world to create impressive and <span
@@ -8,37 +8,48 @@
                     client's unique
                     personality.</p>
             </div>
-
             <picture>
                 <!-- Desktop screen 1440-->
                 <source media="(min-width: 1440px)" srcset="
-                           ./images/about/about-desktop@1x.jpg 1x,
-                          ./images/about/about-desktop@2x.jpg 2x,
-                          ./images/about/about-desktop@3x.jpg 3x
-                        " type="image/jpg" width="680" height="700" loading="lazy" />
+                        ./images/about/about-desktop@1x.webp 1x,
+                        ./images/about/about-desktop@2x.webp 2x,
+                        ./images/about/about-desktop@3x.webp 3x
+                      " type="image/webp" />
+                <source media="(min-width: 1440px)" srcset="
+                        ./images/about/about-desktop@1x.jpg 1x,
+                        ./images/about/about-desktop@2x.jpg 2x,
+                        ./images/about/about-desktop@3x.jpg 3x
+                      " type="image/jpg" />
                 <!-- Tablet screen -->
                 <source media="(min-width: 768px)" srcset="
-                          ./images/about/about-tablet@1x.jpg 1x,
-                          ./images/about/about-tablet@2x.jpg 2x,
-                          ./images/about/about-tablet@3x.jpg 3x
-                        " type="image/jpg" width="704" height="700" loading="lazy" />
+                        ./images/about/about-tablet@1x.webp 1x,
+                        ./images/about/about-tablet@2x.webp 2x,
+                        ./images/about/about-tablet@3x.webp 3x
+                      " type="image/webp" />
+                <source media="(min-width: 768px)" srcset="
+                        ./images/about/about-tablet@1x.jpg 1x,
+                        ./images/about/about-tablet@2x.jpg 2x,
+                        ./images/about/about-tablet@3x.jpg 3x
+                      " type="image/jpg" />
                 <!-- Mobile screen -->
                 <source media="(max-width: 767px)" srcset="
-                          ./images/about/about-mobile@1x.jpg 1x,
-                          ./images/about/about-mobile@2x.jpg 2x,
-                          ./images/about/about-mobile@3x.jpg 3x
-                        " type="image/jpg" loading="lazy" />
+                        ./images/about/about-mobile@1x.webp 1x,
+                        ./images/about/about-mobile@2x.webp 2x,
+                        ./images/about/about-mobile@3x.webp 3x
+                      " type="image/webp" />
+                <source media="(max-width: 767px)" srcset="
+                        ./images/about/about-mobile@1x.jpg 1x,
+                        ./images/about/about-mobile@2x.jpg 2x,
+                        ./images/about/about-mobile@3x.jpg 3x
+                      " type="image/jpg" />
 
-                <img class="photo" src="../images/about/about-mobile@1x.jpg" alt="photo" width="343" height="500"
-                    loading="lazy">
-
+                <img class="about-img" src="./images/about/about-mobile@1x.jpg" alt="photo" loading="lazy" />
             </picture>
         </div>
         <div class="second-part">
-
             <ul class="list-information">
                 <li class="list-item">
-                    <div class="ac">
+                    <div class="about-ac">
                         <div class="accordion-header">
                             <h3 class="list-item-title">ABOUT ME</h3>
                             <button class="accordion-button" type="button">
@@ -82,9 +93,8 @@
                         </div>
                     </div>
                 </li>
-
                 <li class="list-item">
-                    <div class="ac">
+                    <div class="about-ac">
                         <div class="accordion-header">
                             <h3 class="list-item-title">ROLE</h3>
                             <button class="accordion-button" type="button">
@@ -111,7 +121,7 @@
                     </div>
                 </li>
                 <li class="list-item">
-                    <div class="ac">
+                    <div class="about-ac">
                         <div class="accordion-header">
                             <h3 class="list-item-title">EDUCATION</h3>
                             <button class="accordion-button" type="button">
@@ -147,30 +157,24 @@
                 </li>
             </ul>
         </div>
-
-
-
         <div class="third-part">
-            <div class="swiper">
-
-                <ul class="swiper-wrapper list-skills">
-                    <li class="swiper-slide list-icon  active">HTML/CSS</li>
-                    <li class="swiper-slide list-icon">JavaScript</li>
-                    <li class="swiper-slide list-icon">React</li>
-                    <li class="swiper-slide list-icon">Node.js</li>
-                    <li class="swiper-slide list-icon">React Native</li>
-                    <li class="swiper-slide list-icon">Soft skills</li>
-                </ul>
-
-                <button class="swiper-button" type="button">
+            <div class="about-swiper-around">
+                <div class="about-swiper-container">
+                    <ul class="swiper-wrapper list-skills">
+                        <li class="swiper-slide list-icon  active">HTML/CSS</li>
+                        <li class="swiper-slide list-icon">JavaScript</li>
+                        <li class="swiper-slide list-icon">React</li>
+                        <li class="swiper-slide list-icon">Node.js</li>
+                        <li class="swiper-slide list-icon">React Native</li>
+                        <li class="swiper-slide list-icon">Soft skills</li>
+                    </ul>
+                </div>
+                <button class="about-swiper-button" type="button">
                     <svg class="mobile-next-slider" width="28" height="28">
                         <use href="./images/favicon/icons.svg#icon-arrow-right"></use>
                     </svg>
                 </button>
             </div>
         </div>
-    </div>
-
-
     </div>
 </section>

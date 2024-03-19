@@ -16,22 +16,21 @@
 
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
-
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
 
   menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('is-open');
-      openMenuBtn.setAttribute('aria-expanded', false);
-      document.body.classList.remove('no-scroll');
-      bodyScrollLock.enableBodyScroll(document.body);
+    link.addEventListener('click', event => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        toggleMenu();
+      }
     });
   });
 
@@ -40,7 +39,6 @@
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
-
     document.body.classList.remove('no-scroll');
   });
 })();

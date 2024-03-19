@@ -1,18 +1,21 @@
 .hero-section {
   position: relative;
   width: 100%;
-  background-image: url(../images/hero/glass-effect-mobile.png);
+  margin-bottom: 32px;
+}
+
+.hero-section {
+  background-image: url(/images/hero/glass-effect-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  margin-bottom: 32px;
 }
 
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx),
   screen and (-webkit-min-device-pixel-ratio: 2) {
   .hero-section {
-    background-image: url(../images/hero/glass-effect-mobile@2x.png);
+    background-image: url(/images/hero/glass-effect-mobile@2x.png);
   }
 }
 
@@ -25,27 +28,22 @@
   max-width: 100%;
   background-image: linear-gradient(
     to right,
-    #1c1d20,
-    #ed3b44,
-    #e0373f,
-    #fafafa,
-    #242527
+    var(--cards-color),
+    var(--btn-color),
+    var(--btn-hover-color),
+    var(--main-color),
+    var(--support-text)
   );
   background-size: 60%;
   background-clip: text;
-  color: var(--main-color);
-  transition: color var(--cubic);
-}
-
-.hero-title:hover,
-.hero-title:focus {
   color: transparent;
-  animation: animated-gradient 1.5s infinite alternate-reverse; /* Збільшено час анімації */
+  animation: animated-gradient 1.5s infinite alternate-reverse;
+  transition: color var(--cubic);
 }
 
 @keyframes animated-gradient {
   to {
-    color: #fafafa;
+    color: var(--main-color);
   }
 }
 
@@ -93,12 +91,11 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--cubic), border-color var(--cubic);
 }
 
 .hero-list-link {
-  padding: 15px;
+  padding: 8px;
 }
 
 .hero-list-item:hover,
@@ -118,7 +115,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--cubic);
 }
 
 .hero-link-email:hover,
@@ -139,15 +136,19 @@
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    background-image: url(../images/hero/glass-effect-tablet.png);
+    background-image: url(/images/hero/glass-effect-tablet.png);
   }
 
   @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx),
     screen and (-webkit-min-device-pixel-ratio: 2) {
     .hero-section {
-      background-image: url(../images/hero/glass-effect-tablet@2x.png);
+      background-image: url(/images/hero/glass-effect-tablet@2x.png);
     }
+  }
+
+  .hero-list-link {
+    padding: 15px;
   }
 
   .hero-general-container {
@@ -180,7 +181,7 @@
 
 @media screen and (min-width: 1440px) {
   .hero-section {
-    background-image: url(../images/hero/bg-desktop.png);
+    background-image: url(/images/hero/bg-desktop.png);
   }
 
   .hero-general-container {
@@ -191,7 +192,7 @@
     screen and (min-resolution: 2dppx),
     screen and (-webkit-min-device-pixel-ratio: 2) {
     .hero-section {
-      background-image: url(../images/hero/bg-desktop@2x.png);
+      background-image: url(/images/hero/bg-desktop@2x.png);
     }
   }
 

@@ -3,7 +3,7 @@
     <div class="logo-wrapper">
       <picture>
         <source
-          media="(min-width: 1440px)"
+          media="(min-width: 320px)"
           srcset="
             ./images/header/header-desktop@1x.jpg  1x,
             ./images/header/header-desktop@2x.jpg  2x,
@@ -14,35 +14,9 @@
           "
           type="image/jpg"
         />
-
-        <source
-          media="(min-width: 768px)"
-          srcset="
-            ./images/header/header-tablet@1x.jpg  1x,
-            ./images/header/header-tablet@2x.jpg  2x,
-            ./images/header/header-tablet@3x.jpg  3x,
-            ./images/header/header-tablet@1x.webp 1x,
-            ./images/header/header-tablet@2x.webp 2x,
-            ./images/header/header-tablet@3x.webp 3x
-          "
-          type="image/jpg"
-        />
-
-        <source
-          media="(max-width: 768px)"
-          srcset="
-            ./images/header/header-mobile@1x.jpg  1x,
-            ./images/header/header-mobile@2x.jpg  2x,
-            ./images/header/header-mobile@3x.jpg  3x,
-            ./images/header/header-mobile@1x.webp 1x,
-            ./images/header/header-mobile@2x.webp 2x,
-            ./images/header/header-mobile@3x.webp 3x
-          "
-        />
-
         <img
           class="logo-img"
-          src="./images/header/header-mobile@1x.jpg"
+          src="./images/header/header-desktop@1x.jpg"
           alt="icon-resume"
           width="80"
           height="80"
@@ -67,8 +41,13 @@
       </div>
     </nav>
     <a class="header-order-link" href="#footer">Order the project</a>
-    <button class="burger-btn js-open-menu" type="button">
-      <svg class="burger-icon" width="28" height="28" aria-label="icon-nurger">
+    <button class="header-btn-burger js-open-menu" type="button">
+      <svg
+        class="burger-icon"
+        width="28"
+        height="28"
+        aria-label="icon mobile menu"
+      >
         <use href="./images/favicon/icons.svg#icon-burger"></use>
       </svg>
     </button>
