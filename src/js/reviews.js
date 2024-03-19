@@ -1,11 +1,6 @@
 'use strict';
 
-import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
-import 'swiper/css';
-// import 'swiper/css/navigation';
-
-Swiper.use([Navigation, Keyboard, Mousewheel]);
+import { swiperReviews } from './swiper.js';
 
 const URL = 'https://portfolio-js.b.goit.study/api/reviews';
 const list = document.querySelector('.reviews-list');
@@ -20,43 +15,7 @@ fetch(URL)
   .then(data => {
     list.innerHTML = renderCard(data);
 
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      updateOnWindowResize: true,
-      slidesPerView: 1,
-      enabled: true,
-      swipeHandler: '.reviews-list-item',
-      speed: 300,
-
-      keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-      },
-
-      mousewheel: {
-        invert: true,
-      },
-
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 16,
-        },
-
-        1440: {
-          slidesPerView: 4,
-          slidesPerGroup: 1,
-          spaceBetween: 18,
-        },
-      },
-
-      navigation: {
-        prevEl: '.reviews-btn-left',
-        nextEl: '.reviews-btn-right',
-        preventClicks: false,
-      },
-    });
+    swiperReviews;
   })
   .catch(error => console.log(error));
 
