@@ -122,7 +122,9 @@ color: var(--cards-color);
          .projects-btn:disabled .arrow-btn-left-icon {
              stroke: #fafafa33;
          }
-
+.swiper-projects{
+    overflow: hidden;
+}
 
 
 /* ======MOBILE END====== */
