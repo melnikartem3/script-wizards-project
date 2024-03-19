@@ -169,7 +169,7 @@ textarea::-webkit-scrollbar {
     padding-top: 48px;
     max-width: 768px;
     background-image: url(/images/together/footer-tablet.png);
-    background-position: top 0 right -30px;
+    background-position: top right -10px;
   }
   @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx),
@@ -232,7 +232,7 @@ textarea::-webkit-scrollbar {
     padding-top: 82px;
     max-width: 1440px;
     background-image: url(/images/together/footer-desktop.png);
-    background-position: top 0 right -90px;
+    background-position: top 0 right -60px;
   }
 
   @media screen and (min-resolution: 192dpi),
