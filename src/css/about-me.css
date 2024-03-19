@@ -133,7 +133,14 @@
 .mobile-next-slider {
   stroke: #3b3b3b;
   fill: transparent;
+  transition: stroke var(--cubic);
 }
+
+.mobile-next-slider:hover,
+.mobile-next-slider:focus {
+  stroke: var(--main-color);
+}
+
 .list-skills {
   display: flex;
 }
