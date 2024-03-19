@@ -11,19 +11,23 @@ const faqBtns = document.querySelectorAll('.faq-list-item-btn');
 
 faqBtns.forEach(function(faqBtn) {
     faqBtn.addEventListener('click', function () {
-        
         const faqListItem = faqBtn.parentElement;
         const faqText = faqListItem.querySelector('.faq-list-item-text');
-        const faqSvg = faqBtn.querySelector('.faq-svg')
- 
-        if (faqText.style.display === 'none' || !faqText.style.display) {
-            faqText.style.display = 'block';
-            faqBtn.parentElement.classList.remove('close-fqa-list-item-laptop')
-            faqSvg.classList.add('close-svg')
+        const faqSvg = faqBtn.querySelector('.faq-svg');
+        const faqTitle = faqListItem.querySelector('.faq-list-item-title')
+
+        if (faqText.classList.contains('is-active')) {
+            faqText.classList.remove('is-active');
+            faqText.classList.add('faq-mobile-text')
+            faqTitle.classList.remove('faq-title-is-active');
+            faqBtn.parentElement.classList.remove('close-fqa-list-item-laptop');
+            faqSvg.classList.add('close-svg');
         } else {
-            faqText.style.display = 'none';
-            faqSvg.classList.remove('close-svg')
-            faqBtn.parentElement.classList.add('close-fqa-list-item-laptop')
+            faqText.classList.remove('faq-mobile-text')
+            faqText.classList.add('is-active');
+            faqTitle.classList.add('faq-title-is-active');
+            faqSvg.classList.remove('close-svg');
+            faqBtn.parentElement.classList.add('close-fqa-list-item-laptop');
         }
     });
 });
