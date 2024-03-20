@@ -7,9 +7,9 @@
 }
 
 .covers {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: transparent; */
   height: 508px;
   margin-bottom: 64px;
   padding-top: 32px;

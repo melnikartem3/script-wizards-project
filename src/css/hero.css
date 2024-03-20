@@ -124,7 +124,7 @@
   border-color: var(--main-color);
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 374px) {
   .hero-list {
     max-width: 320px;
     padding-bottom: 24px;
