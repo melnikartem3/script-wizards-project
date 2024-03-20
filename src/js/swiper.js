@@ -10,6 +10,7 @@ export const swiperReviews = new Swiper('.swiper-reviews-wrapper', {
   enabled: true,
   swipeHandler: '.reviews-list-item',
   speed: 300,
+  spaceBetween: 20,
 
   keyboard: {
     enabled: true,

@@ -20,7 +20,7 @@
   pointer-events: none;
 
   transform: translateX(100%);
-  transition: transform var(--cubic);
+  transition: transform 300ms linear;
 
   &.is-open {
     opacity: 1;
