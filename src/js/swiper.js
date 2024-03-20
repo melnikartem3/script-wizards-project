@@ -59,21 +59,21 @@ export const swiperProjects = new Swiper('.swiper-projects', {
   },
 });
 
-new Swiper('.about-swiper-container', {
+export const swiperAbout = new Swiper('.about-swiper-container', {
   loop: true,
   setWrapperSize: true,
   modules: [Navigation, Keyboard, Mousewheel],
   spaceBetween: 0,
   simulateTouch: true,
   grabCursor: true,
-  slideActiveClass: 'about-slide-active',
+  slideActiveClass: 'active',
 
   navigation: {
     nextEl: '.about-swiper-button',
   },
-  mousewheel: {
-    invert: true,
-  },
+  // mousewheel: {
+  //   invert: true,
+  // },
 
   keyboard: {
     enabled: true,

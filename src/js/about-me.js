@@ -26,19 +26,8 @@ accordionHeaders.forEach(header => {
 });
 
 //////////////////////////////Swiper///////////////////////////////////////
-// Обробник кліку на кнопку "Наступний"
-document.querySelector('.about-swiper-button').addEventListener('click', () => {
-  const activeSlide = document.querySelector('.swiper-slide.active');
-  const nextSlide = activeSlide.nextElementSibling;
+import { swiperAbout } from './swiper.js';
 
-  // Перевіряємо, чи існує наступний слайд
-  if (nextSlide) {
-    activeSlide.classList.remove('active');
-    nextSlide.classList.add('active');
-  } else {
-    // Якщо наступного слайду немає, перехід на перший
-    const firstSlide = document.querySelector('.swiper-slide');
-    activeSlide.classList.remove('active');
-    firstSlide.classList.add('active');
-  }
+document.querySelector('.about-swiper-button').addEventListener('click', () => {
+  swiperAbout.slideNext();
 });
