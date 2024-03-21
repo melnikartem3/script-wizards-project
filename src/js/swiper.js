@@ -38,6 +38,7 @@ export const swiperProjects = new Swiper('.swiper-projects', {
     nextEl: '.arrow-btn-right',
   },
   watchOverflow: true,
+  spaceBetween: 20,
   slidesPerGroup: 1, 
   slidesPerView: 1,
   speed: 300,
