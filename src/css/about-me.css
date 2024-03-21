@@ -170,6 +170,11 @@
   stroke: var(--main-color);
 }
 
+.about-swiper-button:hover .mobile-next-slider,
+.about-swiper-button:focus .mobile-next-slider {
+  stroke: var(--main-color);
+}
+
 .list-skills {
   display: flex;
 }
