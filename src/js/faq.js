@@ -20,13 +20,13 @@ faqBtns.forEach(function (faqBtn) {
       faqText.classList.add('faq-mobile-text');
       faqTitle.classList.remove('faq-title-is-active');
       faqBtn.parentElement.classList.remove('close-fqa-list-item-laptop');
-      faqSvg.classList.add('close-svg');
+      faqSvg.classList.remove('close-svg');
     } else {
       faqText.classList.remove('faq-mobile-text');
       faqText.classList.add('is-active');
       faqTitle.classList.add('faq-title-is-active');
-      faqSvg.classList.remove('close-svg');
       faqBtn.parentElement.classList.add('close-fqa-list-item-laptop');
+      faqSvg.classList.add('close-svg');
     }
   });
 });

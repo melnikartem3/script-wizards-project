@@ -85,10 +85,45 @@ color: var(--cards-color);
 
 }
 
-.projects-see-more-link:hover,
-.projects-see-more-link:focus {
-    background-color: var(--btn-hover-color);
+
+
+.rotate-out-hor:hover,
+.rotate-out-hor:focus {
+	-webkit-animation: rotate-out-hor 1000ms ease-in alternate backwards;
+	        animation: rotate-out-hor 1000ms ease-in alternate backwards;
+            background-color: var(--btn-hover-color);
+            
 }
+
+
+
+
+@-webkit-keyframes rotate-out-hor {
+    0% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      opacity: 0;
+    }
+  }
+  @keyframes rotate-out-hor {
+    0% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      opacity: 0;
+    }
+  }
+
+
 
 .arrow-button-wraper {
     display: flex;

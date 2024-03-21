@@ -1,16 +1,16 @@
 .reviews-page {
-  padding: 2rem 0;
+  padding: 6rem 0 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-page {
-    padding: 3rem 0;
+    padding: 9rem 0 3rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .reviews-page {
-    padding: 5.125rem 0;
+    padding: 15.375rem 0 5.125rem;
   }
 }
 
