@@ -1,3 +1,18 @@
+@media screen and (max-width: 767px) {
+  .faq-second-title {
+    max-width: 230px;
+  }
+  .faq-third-title {
+    max-width: 241px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .faq-last-title {
+    max-width: 480px;
+  }
+}
+
 .faq-title {
   width: 284px;
   height: 24px;

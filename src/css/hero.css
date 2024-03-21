@@ -91,7 +91,8 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  transition: background-color var(--cubic), border-color var(--cubic);
+  transition: background-color var(--cubic), border-color var(--cubic),
+    transform var(--cubic), box-shadow var(--cubic);
 }
 
 .hero-list-link {
@@ -102,6 +103,8 @@
 .hero-list-item:focus {
   background-color: var(--btn-hover-color);
   border-color: var(--main-color);
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 0 10px 5px rgba(237, 59, 68, 0.35);
 }
 
 .hero-link-email {
@@ -115,13 +118,16 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  transition: background-color var(--cubic), border-color var(--cubic);
+  transition: background-color var(--cubic), border-color var(--cubic),
+    transform var(--cubic), box-shadow var(--cubic);
 }
 
 .hero-link-email:hover,
 .hero-link-email:focus {
   background-color: var(--btn-hover-color);
   border-color: var(--main-color);
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px 5px rgba(237, 59, 68, 0.35);
 }
 
 @media screen and (max-width: 374px) {
