@@ -9,6 +9,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-image: -webkit-image-set('/images/hero/glass-effect-mobile.webp');
+  background-image: image-set('/images/hero/glass-effect-mobile.webp');
 }
 
 @media screen and (min-resolution: 192dpi),
@@ -16,6 +18,17 @@
   screen and (-webkit-min-device-pixel-ratio: 2) {
   .hero-section > .hero-general-container {
     background-image: url(/images/hero/glass-effect-mobile@2x.png);
+  }
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section > .hero-general-container {
+    background-image: -webkit-image-set(
+      '/images/hero/glass-effect-mobile@2x.webp'
+    );
+    background-image: image-set('/images/hero/glass-effect-mobile@2x.webp');
   }
 }
 
@@ -157,6 +170,10 @@
 @media screen and (min-width: 768px) {
   .hero-section > .hero-general-container {
     background-image: url(/images/hero/glass-effect-tablet.png);
+    background-image: -webkit-image-set(
+      '/images/hero/glass-effect-tablet.webp'
+    );
+    background-image: image-set('/images/hero/glass-effect-tablet.webp');
   }
 
   @media screen and (min-resolution: 192dpi),
@@ -164,6 +181,17 @@
     screen and (-webkit-min-device-pixel-ratio: 2) {
     .hero-section > .hero-general-container {
       background-image: url(/images/hero/glass-effect-tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-section > .hero-general-container {
+      background-image: -webkit-image-set(
+        '/images/hero/glass-effect-tablet@2x.webp'
+      );
+      background-image: image-set('/images/hero/glass-effect-tablet@2x.webp');
     }
   }
 
@@ -202,6 +230,8 @@
 @media screen and (min-width: 1440px) {
   .hero-section > .hero-general-container {
     background-image: url(/images/hero/bg-desktop.png);
+    background-image: -webkit-image-set('/images/hero/bg-desktop.webp');
+    background-image: image-set('/images/hero/bg-desktop.webp');
   }
 
   .hero-general-container {
@@ -213,6 +243,15 @@
     screen and (-webkit-min-device-pixel-ratio: 2) {
     .hero-section > .hero-general-container {
       background-image: url(/images/hero/bg-desktop@2x.png);
+    }
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-section > .hero-general-container {
+      background-image: -webkit-image-set('/images/hero/bg-desktop@2x.webp');
+      background-image: image-set('/images/hero/bg-desktop@2x.webp');
     }
   }
 
