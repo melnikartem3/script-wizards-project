@@ -2,32 +2,43 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
-export const swiper = new Swiper('.swiper-container', {
-  modules: [Navigation, Keyboard],
-  slidesPerView: 4,
-  allowTouchMove: true,
-  slideToClickedSlide: true,
-  observer: true,
-  observeParents: true,
-  spaceBetween: 16,
-  grabCursor: true,
+export const swiperReviews = new Swiper('.swiper-reviews-wrapper', {
+  modules: [Navigation, Keyboard, Mousewheel],
+  direction: 'horizontal',
+  updateOnWindowResize: true,
+  slidesPerView: 1,
+  enabled: true,
+  swipeHandler: '.reviews-list-item',
+  speed: 300,
+  spaceBetween: 20,
+
   keyboard: {
     enabled: true,
+    onlyInViewport: false,
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+
+  mousewheel: {
+    invert: true,
   },
+
   breakpoints: {
-    375: {
-      slidesPerView: 1,
-    },
     768: {
       slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
     },
+
     1440: {
       slidesPerView: 4,
+      slidesPerGroup: 1,
+      spaceBetween: 18,
     },
+  },
+
+  navigation: {
+    prevEl: '.reviews-btn-left',
+    nextEl: '.reviews-btn-right',
+    preventClicks: false,
   },
 });
 
@@ -40,6 +51,7 @@ export const swiperProjects = new Swiper('.swiper-projects', {
   watchOverflow: true,
   spaceBetween: 20,
   slidesPerGroup: 1, 
+  slidesPerGroup: 1,
   slidesPerView: 1,
   speed: 300,
   mousewheel: {
@@ -48,25 +60,23 @@ export const swiperProjects = new Swiper('.swiper-projects', {
   keyboard: {
     enabled: true,
   },
-  
 });
 
-
-new Swiper('.about-swiper-container', {
+export const swiperAbout = new Swiper('.about-swiper-container', {
   loop: true,
   setWrapperSize: true,
   modules: [Navigation, Keyboard, Mousewheel],
   spaceBetween: 0,
   simulateTouch: true,
   grabCursor: true,
-  slideActiveClass: 'about-slide-active',
+  slideActiveClass: 'active',
 
   navigation: {
     nextEl: '.about-swiper-button',
   },
-  mousewheel: {
-    invert: true,
-  },
+  // mousewheel: {
+  //   invert: true,
+  // },
 
   keyboard: {
     enabled: true,
