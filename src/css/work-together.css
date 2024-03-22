@@ -257,8 +257,8 @@ textarea::-webkit-scrollbar {
     max-width: 1440px;
     background-image: url(/images/together/footer-desktop.png);
     background-position: top 0 right -60px;
-    background-image: -webkit-image-set('/images/together/footer-desktop.webp');
-    background-image: image-set('/images/together/footer-desktop.webp');
+    /* background-image: -webkit-image-set('/images/together/footer-desktop.webp');
+    background-image: image-set('/images/together/footer-desktop.webp'); */
   }
 
   @media screen and (min-resolution: 192dpi),
