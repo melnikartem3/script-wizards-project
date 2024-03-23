@@ -1,64 +1,43 @@
 'use strict';
 
-import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
-import 'swiper/css';
-// import 'swiper/css/navigation';
-
-Swiper.use([Navigation, Keyboard, Mousewheel]);
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import { swiperReviews } from './swiper.js';
 
 const URL = 'https://portfolio-js.b.goit.study/api/reviews';
 const list = document.querySelector('.reviews-list');
+const btnWrapper = document.querySelector('.reviews-btn-wrapper');
 
-fetch(URL)
-  .then(response => {
+async function fetchDataAndRender() {
+  try {
+    const response = await fetch(URL);
+
     if (!response.ok) {
       throw new Error(response.status);
     }
-    return response.json();
-  })
-  .then(data => {
+
+    const data = await response.json();
+
     list.innerHTML = renderCard(data);
 
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      updateOnWindowResize: true,
-      slidesPerView: 1,
-      enabled: true,
-      swipeHandler: '.reviews-list-item',
-      speed: 300,
-
-      keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-      },
-
-      mousewheel: {
-        invert: true,
-      },
-
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 16,
-        },
-
-        1440: {
-          slidesPerView: 4,
-          slidesPerGroup: 1,
-          spaceBetween: 18,
-        },
-      },
-
-      navigation: {
-        prevEl: '.reviews-btn-left',
-        nextEl: '.reviews-btn-right',
-        preventClicks: false,
-      },
+    swiperReviews.update();
+  } catch (error) {
+    iziToast.error({
+      theme: 'dark',
+      message: 'Oops, sorry, something went wrong. Please try again later.',
+      messageColor: '#ffffff',
+      backgroundColor: '#ef4040',
+      position: 'topRight',
+      pauseOnHover: false,
+      progressBarColor: '#b51b1b',
+      timeout: 3000,
     });
-  })
-  .catch(error => console.log(error));
+
+    list.innerHTML = '<span class="reviews-plug">Not found 😔</span>';
+
+    btnWrapper.style.display = 'none';
+  }
+}
 
 function renderCard(card) {
   return card
@@ -79,3 +58,28 @@ function renderCard(card) {
     })
     .join('');
 }
+
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const section = document.querySelector('.reviews-page');
+
+  let sectionReached = false;
+
+  window.addEventListener('scroll', function () {
+    if (!sectionReached && isElementInViewport(section)) {
+      sectionReached = true;
+      fetchDataAndRender();
+    }
+  });
+});

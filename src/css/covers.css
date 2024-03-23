@@ -7,11 +7,11 @@
 }
 
 .covers {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: transparent; */
   height: 508px;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
   padding-top: 32px;
 }
 
@@ -26,6 +26,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: image-set('/images/covers/elements_vectors.webp');
+  background-image: -webkit-image-set('/images/covers/elements_vectors.webp');
 }
 
 .covers-scroller-inner-container {
@@ -58,7 +60,7 @@
 @media screen and (min-width: 768px) {
   .covers {
     height: 960px;
-    margin-bottom: 96px;
+    /* margin-bottom: 96px; */
     padding-top: 48px;
   }
 
@@ -83,7 +85,7 @@
 @media screen and (min-width: 1440px) {
   .covers {
     padding-top: 82px;
-    margin-bottom: 164px;
+    /* margin-bottom: 164px; */
   }
   .covers-scroller {
     max-width: 1440px;
@@ -99,5 +101,9 @@
   screen and (min-device-pixel-ratio: 2) {
   .covers-scroller {
     background-image: url(/images/covers/elements_vectors@2x-min.png);
+    background-image: -webkit-image-set(
+      '/images/covers/elements_vectors@2x.webp'
+    );
+    background-image: image-set('/images/covers/elements_vectors@2x.webp');
   }
 }
